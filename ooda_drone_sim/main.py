@@ -23,7 +23,7 @@ while True:
     # Clear screen every frame
     screen.fill(config.SCREEN_COLOR)  
 
-    friend.update()
+    friend.update([enemy])
     enemy.update()
 
     friend.draw(screen)
