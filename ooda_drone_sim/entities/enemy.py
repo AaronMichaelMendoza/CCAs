@@ -3,14 +3,8 @@
 
 import pygame
 import config
+from entities.drone import Drone
 
-class Enemy:
+class Enemy(Drone):
     def __init__(self, x, y):
-        self.x = x
-        self.y = y
-
-    def draw(self, world):
-        pygame.draw.circle(world, config.ENEMY_COLOR, (self.x, self.y), config.ENEMY_RADIUS) # surface, color, center, radius  
-
-    def update(self):
-        pass  
+        super().__init__(x, y, config.ENEMY_X_SPEED, config.ENEMY_Y_SPEED, config.ENEMY_RADIUS, config.ENEMY_COLOR)

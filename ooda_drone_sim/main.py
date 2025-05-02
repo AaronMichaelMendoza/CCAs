@@ -3,7 +3,7 @@
 
 import pygame
 import config
-from entities.drone import Drone
+from entities.friend import Friend
 from entities.enemy import Enemy
 
 pygame.init()
@@ -11,8 +11,8 @@ pygame.init()
 screen = pygame.display.set_mode((config.SCREEN_WIDTH, config.SCREEN_HEIGHT))
 clock = pygame.time.Clock()
 
-friend = Drone(200, 150)
-foe = Enemy(400, 300)
+friend = Friend(200, 150)
+enemy = Enemy(400, 300)
 
 while True:
     for event in pygame.event.get():
@@ -24,10 +24,10 @@ while True:
     screen.fill(config.SCREEN_COLOR)  
 
     friend.update()
-    foe.update()
+    enemy.update()
 
     friend.draw(screen)
-    foe.draw(screen)
+    enemy.draw(screen)
 
     # Refresh screen
     pygame.display.flip()         
