@@ -2,17 +2,17 @@
 ## Description: Entry point that runs simulation
 
 import pygame
-import config as constants
+import config
 from entities.drone import Drone
 from entities.enemy import Enemy
 
 pygame.init()
 
-screen = pygame.display.set_mode((constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT))
+screen = pygame.display.set_mode((config.SCREEN_WIDTH, config.SCREEN_HEIGHT))
 clock = pygame.time.Clock()
 
-friend = Drone(50, 200, 150)
-foe = Enemy(30, 400, 300)
+friend = Drone(200, 150)
+foe = Enemy(400, 300)
 
 while True:
     for event in pygame.event.get():
@@ -20,7 +20,8 @@ while True:
             pygame.quit()
             quit()
 
-    screen.fill((255, 255, 255))  # Clear screen every frame
+    # Clear screen every frame
+    screen.fill(config.SCREEN_COLOR)  
 
     friend.update()
     foe.update()
@@ -28,6 +29,8 @@ while True:
     friend.draw(screen)
     foe.draw(screen)
 
-    pygame.display.flip()         # Refresh screen
+    # Refresh screen
+    pygame.display.flip()         
 
-    clock.tick(constants.FPS)  # Limit to 60 FPS
+    # Limit to 60 FPS
+    clock.tick(config.FPS)  

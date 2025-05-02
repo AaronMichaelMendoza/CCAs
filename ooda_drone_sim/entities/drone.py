@@ -2,16 +2,15 @@
 ## Description: Holds the drone entity class
 
 import pygame
+import config
 
 class Drone:
-    def __init__(self, radius, longitude, latitude):
-        self.radius = radius
-        self.x = longitude
-        self.y = latitude
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
     def draw(self, world):
-        # Draw a black circle
-        pygame.draw.circle(world, (0, 0, 0), (self.x, self.y), self.radius) # surface, color, center, radius  
+        pygame.draw.circle(world, config.DRONE_COLOR, (self.x, self.y), config.DRONE_RADIUS) # surface, color, center, radius  
 
     def update(self):
-        pass  # You'll use this next week to make things move
+        pass
