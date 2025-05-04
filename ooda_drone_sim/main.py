@@ -24,7 +24,7 @@ while True:
     screen.fill(config.SCREEN_COLOR)  
 
     friend.update([enemy])
-    enemy.update()
+    enemy.update(friend)
 
     friend.draw(screen)
     enemy.draw(screen)

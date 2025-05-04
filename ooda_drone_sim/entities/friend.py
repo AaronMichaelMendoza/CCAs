@@ -41,6 +41,9 @@ class Friend(Drone):
             if abs(self.speed_y) < config.MIN_SPEED:
                 self.speed_y = math.copysign(config.MIN_SPEED, self.speed_y)
 
+            # move the friend
+            self.x += self.speed_x
+            self.y += self.speed_y
         else:
             # Idle
             super().update()
