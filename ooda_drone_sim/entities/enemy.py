@@ -26,5 +26,4 @@ class Enemy(Drone):
 
         super().update()
 
-    
-    # TODO Create function to have enemies not bump into each other
+    # TODO Create function to have enemies not bump into each other, or swarm behavior
