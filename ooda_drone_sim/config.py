@@ -1,8 +1,8 @@
 ## File name: config.py
 ## Description: Central place for constants
 
-SCREEN_WIDTH = 1000
-SCREEN_HEIGHT = 1000
+SCREEN_WIDTH = 1200
+SCREEN_HEIGHT = 800
 SCREEN_COLOR = (0, 0, 0) # Black
 FPS = 60
 
@@ -15,6 +15,7 @@ ENEMY_X_SPEED = 1
 ENEMY_Y_SPEED = 1
 ENEMY_RADIUS = 10
 ENEMY_COLOR= (255, 0, 0) # Red
+NUM_ENEMIES = 3
 
 DETECTION_RADIUS = 100
 MIN_SPEED = 0.1
