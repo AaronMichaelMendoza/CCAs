@@ -32,6 +32,7 @@ def main():
         # Clear screen every frame
         screen.fill(config.SCREEN_COLOR)  
 
+        # OODA loop
         friend.update(enemies)
         for enemy in enemies:
             enemy.update(friend) 
